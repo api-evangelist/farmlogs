@@ -1,0 +1,131 @@
+aid: farmlogs
+url: https://raw.githubusercontent.com/api-evangelist/farmlogs/refs/heads/main/apis.yml
+name: FarmLogs
+kind: company
+description: FarmLogs was a farm management platform founded in 2011 (by Jesse Vollmar
+  and Brad Koch, operating as AgriSight Inc.) offering field mapping, in-season
+  satellite imagery, weather/rainfall tracking, yield estimation, and profitability
+  tools for row-crop farmers. FarmLogs was acquired by Bushel in June 2021, and in
+  March 2023 Bushel retired the FarmLogs brand in favor of "Bushel Farm," the next
+  generation of its farm management software. As of this review, farmlogs.com
+  301-redirects to bushelfarm.com, which itself redirects to bushelpowered.com -
+  the standalone FarmLogs product and website no longer exist. Bushel does publish
+  a public API, but it is for a separate product line (Bushel Fulfillment and
+  Bushel Production, covering grain contracts and scale-ticket data for grain
+  merchandising) rather than for the FarmLogs-lineage farm-management capabilities
+  (fields, imagery, weather, yield). No self-serve, openly documented public API
+  exists for the farm-management product as of the review date.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Agriculture
+- Farm Management
+- Precision Agriculture
+- Satellite Imagery
+- Acquired
+- Discontinued Brand
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis:
+- aid: farmlogs:fields
+  name: FarmLogs Fields
+  tags:
+  - Fields
+  - Mapping
+  - Boundaries
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://bushelpowered.com/solutions/farm-management/
+  properties:
+  - url: https://bushelpowered.com/solutions/farm-management/
+    type: Documentation
+  - url: openapi/farmlogs-openapi.yml
+    type: OpenAPI
+  description: Field boundary mapping and per-field record-keeping, the original
+    core of FarmLogs. This capability now lives inside Bushel Farm (formerly
+    Bushel Farm/FarmLogs); no self-serve public REST reference, base URL, or
+    endpoint catalog has ever been published for it.
+- aid: farmlogs:satellite-imagery
+  name: FarmLogs Satellite Imagery / NDVI
+  tags:
+  - Satellite Imagery
+  - NDVI
+  - Crop Health
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://bushelpowered.com/solutions/farm-management/
+  properties:
+  - url: https://bushelpowered.com/solutions/farm-management/
+    type: Documentation
+  - url: openapi/farmlogs-openapi.yml
+    type: OpenAPI
+  description: In-season multispectral satellite imagery used to spot yield
+    threats, stress, and management issues field-by-field. A marquee FarmLogs
+    feature historically; no openly documented public imagery API endpoints
+    were ever published, and the standalone FarmLogs product no longer exists.
+- aid: farmlogs:weather
+  name: FarmLogs Weather & Rainfall
+  tags:
+  - Weather
+  - Rainfall
+  - Field-Level
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://bushelpowered.com/farmers
+  properties:
+  - url: https://bushelpowered.com/farmers
+    type: Documentation
+  - url: openapi/farmlogs-openapi.yml
+    type: OpenAPI
+  description: Field-level rainfall and weather tracking with season-over-season
+    comparisons. Bushel Farm continues to market a "Stop Checking Your Rain
+    Gauges" rainfall feature descended from FarmLogs, but exposes it only inside
+    the product, not through a documented public API.
+- aid: farmlogs:yield-and-profitability
+  name: FarmLogs Yield & Profitability
+  tags:
+  - Yield
+  - Profitability
+  - Cost Of Production
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://bushelpowered.com/solutions/farm-management/
+  properties:
+  - url: https://bushelpowered.com/solutions/farm-management/
+    type: Documentation
+  - url: openapi/farmlogs-openapi.yml
+    type: OpenAPI
+  description: Yield tracking, cost-of-production, and field/crop/farm-level
+    profit-and-loss calculations. Bushel Farm's marketing page notes production
+    records can be shared "into your ERP or database using an API connection,"
+    but no self-serve developer reference, base URL, or authentication scheme
+    is published.
+- aid: farmlogs:activities-and-scouting
+  name: FarmLogs Activities & Scouting
+  tags:
+  - Activities
+  - Scouting
+  - Field Notes
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://bushelpowered.com/solutions/farm-management/
+  properties:
+  - url: https://bushelpowered.com/solutions/farm-management/
+    type: Documentation
+  - url: openapi/farmlogs-openapi.yml
+    type: OpenAPI
+  description: Field activity logging and in-field scouting notes, plus
+    machine/equipment activity ingested from John Deere Operations Center and
+    Climate FieldView integrations. These are inbound partner integrations into
+    Bushel Farm, not an outbound public API for third-party developers.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/farmlogs
+- type: Website
+  url: https://www.farmlogs.com
+- type: Documentation
+  url: https://bushelpowered.com/solutions/farm-management/
+- type: Plans
+  url: plans/farmlogs-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/farmlogs-rate-limits.yml
+- type: FinOps
+  url: finops/farmlogs-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

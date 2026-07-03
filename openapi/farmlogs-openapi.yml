@@ -1,0 +1,25 @@
+openapi: 3.0.1
+info:
+  title: FarmLogs API
+  description: >-
+    FarmLogs was a farm management platform (field mapping, in-season satellite
+    imagery/NDVI, weather and rainfall tracking, yield estimation, and
+    profitability tools) founded in 2011 and acquired by Bushel in June 2021.
+    In March 2023 Bushel retired the FarmLogs brand for "Bushel Farm." As of
+    this writing farmlogs.com redirects to bushelfarm.com, which redirects to
+    bushelpowered.com - the standalone FarmLogs product, site, and any
+    developer surface no longer exist. Bushel's own public API documentation
+    (Bushel Fulfillment / Bushel Production) covers a separate grain
+    merchandising product line, not the FarmLogs-lineage farm-management
+    capabilities. No self-serve, openly documented public REST API has ever
+    been published for FarmLogs or its Bushel Farm successor. This document
+    intentionally carries an empty `paths` object because no public endpoints
+    are documented; no endpoints are fabricated.
+  termsOfService: https://bushelpowered.com/terms/
+  contact:
+    name: Bushel (formerly FarmLogs)
+    url: https://bushelpowered.com/solutions/farm-management/
+  version: '0.0.0'
+servers: []
+paths: {}
+components: {}

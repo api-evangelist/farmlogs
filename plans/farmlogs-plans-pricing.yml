@@ -1,0 +1,59 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: FarmLogs
+providerId: farmlogs
+created: '2026-07-03'
+modified: '2026-07-03'
+reconciled: false
+tags:
+- Agriculture
+- Farm Management
+- Acquired
+- Plans
+description: >-
+  FarmLogs no longer sells or prices as a standalone product. FarmLogs was
+  acquired by Bushel in June 2021 and the brand was retired in March 2023 in
+  favor of "Bushel Farm." farmlogs.com now redirects to bushelfarm.com, which
+  redirects to bushelpowered.com. Bushel Farm is marketed to farmers directly
+  (app.bushelfarm.com) rather than through a public, self-serve API price list;
+  there is no metered API product to price, and legacy FarmLogs subscription
+  tiers (historically "Basic" free and a paid "Advanced"/"Standard" tier with
+  imagery and profitability tools) are no longer published anywhere.
+notes: >-
+  No current public pricing exists for a FarmLogs-branded product because the
+  brand has been discontinued. Bushel Farm's own commercial terms (as a farm
+  management app, not an API) would need to be sourced separately from
+  bushelpowered.com if reconciliation is ever required.
+sources:
+- https://www.farmlogs.com
+- https://bushelfarm.com
+- https://bushelpowered.com/solutions/farm-management/
+- https://www.businesswire.com/news/home/20210616005075/en/Bushel-Acquires-FarmLogs
+- https://www.businesswire.com/news/home/20230302005084/en/Bushel-Introduces-Bushel-FarmTM-the-Next-Generation-of-Farm-Management-Software
+plans:
+- id: farmlogs-discontinued
+  name: FarmLogs (Discontinued Brand)
+  type: enterprise
+  description: >-
+    The FarmLogs brand, pricing page, and standalone product were retired
+    after the 2021 Bushel acquisition and the March 2023 Bushel Farm rebrand.
+    No FarmLogs-branded plan, price, or public API tier can be sourced as of
+    the review date; farmers are directed to Bushel Farm instead.
+  entries:
+  - label: FarmLogs Standalone Pricing
+    name: farmlogs_discontinued
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: onetime
+    geo: global
+    unit: 1
+    price: not applicable (brand discontinued; see Bushel Farm)
+    userMultiplied: false
+  elements:
+  - name: Brand Retired March 2023
+  - name: Successor Product Is Bushel Farm
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

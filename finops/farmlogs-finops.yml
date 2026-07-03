@@ -1,0 +1,73 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: FarmLogs
+providerId: farmlogs
+created: '2026-07-03'
+modified: '2026-07-03'
+reconciled: false
+tags:
+- Agriculture
+- Farm Management
+- Acquired
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of FarmLogs spend: there is none to track as a standalone line
+  item. FarmLogs was acquired by Bushel in June 2021 and the brand was retired
+  in March 2023 in favor of Bushel Farm; farmlogs.com now redirects through
+  bushelfarm.com to bushelpowered.com. There is no metered public API and no
+  published FarmLogs-branded invoice or price list to reconcile against the
+  FOCUS spec. Any current spend a farm incurs for this lineage of software
+  would be billed by Bushel under the Bushel Farm product, not FarmLogs.
+notes: >-
+  This artifact is intentionally thin: it documents the absence of a
+  reconcilable FarmLogs cost surface rather than modeling fabricated meters.
+  Verify current Bushel Farm commercial terms directly with Bushel if cost
+  data is ever needed.
+sources:
+- https://www.farmlogs.com
+- https://bushelfarm.com
+- https://bushelpowered.com/solutions/farm-management/
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Bushel (formerly FarmLogs)
+serviceCategory: Software as a Service
+billingModel:
+  pricingCategory: Not Applicable
+  billingFrequency: Not Applicable
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+focusColumns:
+  ServiceName: FarmLogs (Discontinued Brand)
+  ServiceCategory: Software as a Service
+  ProviderName: FarmLogs
+  PublisherName: Bushel
+  InvoiceIssuerName: Bushel
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Not Applicable
+meters: []
+principles:
+- name: Visibility
+  description: >-
+    No FarmLogs-branded meter or invoice line exists to track; current
+    farm-management spend, if any, appears under Bushel Farm.
+- name: Allocation
+  description: Not applicable - no standalone FarmLogs cost center remains post-acquisition.
+- name: Optimization
+  description: Not applicable - there is no FarmLogs API usage to optimize.
+- name: Accountability
+  description: >-
+    Any renewal decision for this software lineage should be evaluated as a
+    Bushel Farm purchase, not a FarmLogs one.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

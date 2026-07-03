@@ -1,0 +1,51 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: FarmLogs
+providerId: farmlogs
+created: '2026-07-03'
+modified: '2026-07-03'
+reconciled: false
+tags:
+- Agriculture
+- Farm Management
+- Acquired
+- Rate Limiting
+- Quotas
+description: >-
+  FarmLogs never published a public API rate-limit or quota policy while it
+  operated as a standalone product, and no such policy is discoverable now
+  that the brand has been retired (farmlogs.com redirects to bushelfarm.com,
+  which redirects to bushelpowered.com). Bushel's own public API documentation
+  (Bushel Fulfillment / Bushel Production) covers a separate grain
+  merchandising product line and is not applicable to the FarmLogs-lineage
+  farm-management capabilities.
+notes: >-
+  No public rate-limit documentation exists for FarmLogs at any point sourced
+  during this review, including via third-party developer directories. If
+  Bushel ever publishes a farm-management API, rate limits would need to be
+  sourced fresh from Bushel's own documentation.
+sources:
+- https://www.farmlogs.com
+- https://bushelfarm.com
+- https://bushelpowered.com/solutions/farm-management/
+- https://bushelfulfillment.bushelops.com/
+responseCodes:
+  throttled: not documented
+limits:
+- name: API Rate Limits
+  scope: account
+  metric: requests
+  limit: not documented publicly
+  notes: >-
+    No FarmLogs or Bushel Farm public API exists to rate-limit; Bushel's
+    published API rate-limit behavior (if any) applies only to the separate
+    Bushel Fulfillment / Bushel Production grain-merchandising APIs.
+policies:
+- name: No Public API Surface
+  description: >-
+    With no self-serve public API published, there is no rate-limit or quota
+    policy to document for FarmLogs or its Bushel Farm successor.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

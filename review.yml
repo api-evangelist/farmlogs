@@ -1,0 +1,136 @@
+aid: farmlogs
+name: FarmLogs
+review:
+  question: Does FarmLogs expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. FarmLogs never published any public API
+    (REST or otherwise) as a standalone product, and the standalone product no
+    longer exists to have a transport to model. There is no server-push
+    (WebSocket or SSE) surface, documented or undocumented, to describe.
+findings:
+  summary: |
+    FarmLogs does not expose a documented public WebSocket API - or any
+    documented public API at all. FarmLogs was founded in 2011 (Jesse Vollmar
+    and Brad Koch, operating as AgriSight Inc., Ann Arbor, MI) as a farm
+    management platform offering field boundary mapping, in-season satellite
+    imagery/NDVI for spotting yield threats and crop stress, field-level
+    weather and rainfall tracking, yield estimation, and cost-of-production /
+    profitability calculations.
+
+    FarmLogs was acquired by Bushel on 2021-06-15. Bushel operated FarmLogs as
+    a distinct brand for roughly two years, then on 2023-03-02 announced
+    "Bushel Farm," described as the next generation of farm management
+    software, replacing the FarmLogs brand. As of this review, https://
+    farmlogs.com 301-redirects to https://bushelfarm.com, which itself
+    301-redirects to https://www.bushelpowered.com/farmers - the standalone
+    FarmLogs website, product, and any developer/API surface it may once have
+    referenced no longer exist independently. The current farmer-facing app
+    lives at https://app.bushelfarm.com.
+
+    Bushel does operate a public API documentation site
+    (https://bushelfulfillment.bushelops.com/), but it covers Bushel
+    Fulfillment and Bushel Production - a separate product line for grain
+    contracts, paperless reconciliation with grain buyers, and scale-ticket
+    data sharing for crop insurance/accounting - authenticated with a static
+    shared key (StaticKeyAuth) against endpoints under
+    centre.scaleticket.net. That API is not for the FarmLogs-lineage
+    farm-management capabilities (fields, imagery, weather, yield, scouting)
+    and does not surface field mapping, satellite imagery, weather, or yield
+    endpoints. Bushel's own farm-management marketing page mentions farmers
+    can share crop production records "into your ERP or database using an API
+    connection," but no base URL, authentication scheme, or endpoint
+    reference for that connection is publicly documented.
+
+    No transport of any kind - REST, WebSocket, or otherwise - is publicly,
+    openly documented for the farm-management product that traces back to
+    FarmLogs.
+  operatingStatus: |
+    Discontinued as a standalone brand. FarmLogs was acquired by Bushel
+    (2021-06-15) and its brand was retired in favor of "Bushel Farm"
+    (announced 2023-03-02). farmlogs.com now redirects to bushelfarm.com,
+    which redirects to bushelpowered.com/farmers. The product lineage
+    (field mapping, satellite imagery, weather, yield, profitability)
+    continues to operate under the Bushel Farm brand and the app.bushelfarm.com
+    application, but there is no surviving FarmLogs-branded product, website,
+    or API to review independently.
+  acquisition:
+    acquirer: Bushel
+    announcedDate: '2021-06-15'
+    rebrandedTo: Bushel Farm
+    rebrandAnnouncedDate: '2023-03-02'
+    note: >-
+      FarmLogs operated as a distinct Bushel-owned brand for about two years
+      before being folded fully into the "Bushel Farm" product name in March
+      2023. The domain farmlogs.com and successor domain bushelfarm.com both
+      now redirect to bushelpowered.com.
+  apiSurface:
+    publicSelfServeApi: false
+    enterpriseIntegrationApi: uncertain
+    publishedBaseURL: false
+    publishedAuth: false
+    publishedEndpointReference: false
+    unrelatedBushelApiExists: true
+    unrelatedBushelApiNote: >-
+      Bushel publishes public API docs for Bushel Fulfillment / Bushel
+      Production (grain contracts and scale-ticket sharing), a different
+      product line from the FarmLogs-lineage farm-management capabilities.
+      This is not counted as a FarmLogs public API.
+    note: >-
+      The OpenAPI artifact (openapi/farmlogs-openapi.yml) intentionally
+      carries an empty paths object because no public endpoints are
+      documented for FarmLogs or its Bushel Farm successor; no endpoints were
+      fabricated.
+  productSurfaces:
+  - name: Fields
+    note: Field boundary mapping and per-field record-keeping.
+  - name: Satellite Imagery / NDVI
+    note: In-season multispectral imagery for spotting yield threats and crop stress.
+  - name: Weather & Rainfall
+    note: Field-level rainfall tracking with season-over-season comparison, marketed by Bushel Farm as "Stop Checking Your Rain Gauges."
+  - name: Yield & Profitability
+    note: Yield tracking plus cost-of-production and field/crop/farm-level profit & loss.
+  - name: Activities & Scouting
+    note: Field activity logs and scouting notes, plus inbound machine-data integrations from John Deere Operations Center and Climate FieldView.
+sources:
+- url: https://www.farmlogs.com
+  type: Website
+  note: 301-redirects to https://bushelfarm.com as of review date.
+- url: https://bushelfarm.com
+  type: Website
+  note: 301-redirects to https://www.bushelpowered.com/farmers as of review date.
+- url: https://www.bushelpowered.com/farmers
+  type: Website
+  note: >-
+    Current farmer-facing hub; text reads "Bushel's farm management software
+    (formerly FarmLogs, Bushel Farm)"; no dedicated Developer/API section.
+- url: https://bushelpowered.com/solutions/farm-management/
+  type: Documentation
+  note: Describes cost-of-production, profitability, and "API connection" data-sharing in passing; no endpoint reference.
+- url: https://bushelfulfillment.bushelops.com/
+  type: Documentation
+  note: Public Bushel API docs, but for the separate Bushel Fulfillment / Bushel Production grain-merchandising product line.
+- url: https://www.businesswire.com/news/home/20210616005075/en/Bushel-Acquires-FarmLogs
+  type: Press
+  note: Announcement of Bushel's acquisition of FarmLogs (2021-06-15).
+- url: https://www.businesswire.com/news/home/20230302005084/en/Bushel-Introduces-Bushel-FarmTM-the-Next-Generation-of-Farm-Management-Software
+  type: Press
+  note: Announcement of the Bushel Farm rebrand replacing FarmLogs (2023-03-02).
+- url: https://www.farmprogress.com/technology/software-firm-bushel-acquires-farmlogs
+  type: Press
+  note: Independent trade-press coverage of the acquisition.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public API surface (REST, WebSocket, or otherwise) exists for FarmLogs
+    or its Bushel Farm successor to model. The catalog documents the
+    historical FarmLogs product surfaces honestly, marks pricing/rate-limit/
+    FinOps artifacts as unreconciled, and records the acquisition and rebrand
+    so the operating status is clear to anyone consulting this entry.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

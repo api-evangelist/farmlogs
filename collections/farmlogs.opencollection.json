@@ -1,0 +1,9 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmLogs API",
+    "version": "0.0.0",
+    "description": "FarmLogs was a farm management platform acquired by Bushel in June 2021 and rebranded as Bushel Farm in March 2023. The standalone FarmLogs product and website no longer exist (farmlogs.com redirects to bushelfarm.com, which redirects to bushelpowered.com). No self-serve, openly documented public API has ever been published for FarmLogs or its Bushel Farm successor. This collection intentionally contains no items because no public endpoints are documented; none were fabricated."
+  },
+  "items": []
+}
