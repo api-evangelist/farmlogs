@@ -114,6 +114,8 @@ apis:
     Climate FieldView integrations. These are inbound partner integrations into
     Bushel Farm, not an outbound public API for third-party developers.
 common:
+- type: DomainSecurity
+  url: security/farmlogs-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/farmlogs
 - type: Website
@@ -126,6 +128,8 @@ common:
   url: rate-limits/farmlogs-rate-limits.yml
 - type: FinOps
   url: finops/farmlogs-finops.yml
+- url: https://bushelpowered.com/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
