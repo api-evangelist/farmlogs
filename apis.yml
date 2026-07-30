@@ -15,7 +15,19 @@ description: FarmLogs was a farm management platform founded in 2011 (by Jesse V
   merchandising) rather than for the FarmLogs-lineage farm-management capabilities
   (fields, imagery, weather, yield). No self-serve, openly documented public API
   exists for the farm-management product as of the review date.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/farmlogs.png
 tags:
 - Agriculture
 - Farm Management
