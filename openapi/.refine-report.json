@@ -1,0 +1,14 @@
+{
+  "provider": "farmlogs",
+  "sources": [
+    "farmlogs-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived farmlogs-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
