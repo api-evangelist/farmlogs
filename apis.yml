@@ -50,7 +50,7 @@ apis:
   properties:
   - url: https://bushelpowered.com/solutions/farm-management/
     type: Documentation
-  - url: openapi/farmlogs-openapi.yml
+  - url: openapi/_original/farmlogs-openapi.yml
     type: OpenAPI
   description: Field boundary mapping and per-field record-keeping, the original
     core of FarmLogs. This capability now lives inside Bushel Farm (formerly
@@ -67,7 +67,7 @@ apis:
   properties:
   - url: https://bushelpowered.com/solutions/farm-management/
     type: Documentation
-  - url: openapi/farmlogs-openapi.yml
+  - url: openapi/_original/farmlogs-openapi.yml
     type: OpenAPI
   description: In-season multispectral satellite imagery used to spot yield
     threats, stress, and management issues field-by-field. A marquee FarmLogs
@@ -84,7 +84,7 @@ apis:
   properties:
   - url: https://bushelpowered.com/farmers
     type: Documentation
-  - url: openapi/farmlogs-openapi.yml
+  - url: openapi/_original/farmlogs-openapi.yml
     type: OpenAPI
   description: Field-level rainfall and weather tracking with season-over-season
     comparisons. Bushel Farm continues to market a "Stop Checking Your Rain
@@ -101,7 +101,7 @@ apis:
   properties:
   - url: https://bushelpowered.com/solutions/farm-management/
     type: Documentation
-  - url: openapi/farmlogs-openapi.yml
+  - url: openapi/_original/farmlogs-openapi.yml
     type: OpenAPI
   description: Yield tracking, cost-of-production, and field/crop/farm-level
     profit-and-loss calculations. Bushel Farm's marketing page notes production
@@ -119,7 +119,7 @@ apis:
   properties:
   - url: https://bushelpowered.com/solutions/farm-management/
     type: Documentation
-  - url: openapi/farmlogs-openapi.yml
+  - url: openapi/_original/farmlogs-openapi.yml
     type: OpenAPI
   description: Field activity logging and in-field scouting notes, plus
     machine/equipment activity ingested from John Deere Operations Center and
